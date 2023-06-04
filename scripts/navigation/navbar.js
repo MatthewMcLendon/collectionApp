@@ -10,4 +10,4 @@ export const navBar = () => {
     `;
 };
 
-// Boardgame and miniatures C, D
+// Boardgame and miniatures C, D. Object, list, provider, form, delete from collection. ON home page, show most recent from each page. Add things to collection
