@@ -1,5 +1,4 @@
 export const boardgameComponent = (boardgame) => {
-  console.log(boardgame.handle);
   return `
     <div class="boardgame-card" id=${boardgame.id}>
         <h2 class="boardgame-name">${boardgame.handle}</h1>

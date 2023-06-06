@@ -17,3 +17,13 @@ export const getBoardgames = () => {
       boardgames = response.games.slice();
     });
 };
+
+export const getBoardgamesByName = (searchName) => {
+  return fetch(
+    `https://api.boardgameatlas.com/api/search?name=${searchName}&pretty=true&client_id=${settings.client_id}`
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      boardgames = response.games.slice();
+    });
+};
