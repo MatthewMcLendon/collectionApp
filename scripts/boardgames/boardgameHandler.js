@@ -3,6 +3,8 @@ import {
   getBoardgamesByID,
   getBoardgamesByName,
   useCollectionIDs,
+  saveBoardgame,
+  deleteBoardgame,
 } from "./boardgameProvider.js";
 import { boardgameList } from "./boardgameList.js";
 import { boardgameSearchComponent } from "./boardgameSearch.js";
@@ -22,9 +24,18 @@ export const boardgameEventHandler = () => {
       ).value;
       getBoardgamesByName(searchName).then(boardgameList);
     }
-  });
 
-  // Needed routes: update, delete, add to profile
+    // add game to collection
+    if (clickEvent.target.className === "add-to-collection-button") {
+      const newBoardgame = { id: clickEvent.target.parentElement.id };
+      saveBoardgame(newBoardgame).then(pageSetup);
+    }
+
+    // remove game from collection
+    if (clickEvent.target.className === "remove-from-collection-button") {
+      deleteBoardgame(clickEvent.target.parentElement.id).then(pageSetup);
+    }
+  });
 };
 
 const pageSetup = () => {

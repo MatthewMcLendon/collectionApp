@@ -3,7 +3,7 @@ import settings from "../.settings.js";
 // api reference at https://www.boardgameatlas.com/api/docs/search
 
 let boardgames = [];
-let collectionIDs = [];
+let collectionIDs = "";
 
 export const useBoardgames = () => {
   return boardgames;
@@ -43,4 +43,20 @@ export const getBoardgamesByName = (searchName) => {
     .then((response) => {
       boardgames = response.games.slice();
     });
+};
+
+export const saveBoardgame = (newBoardgame) => {
+  return fetch(`http://localhost:8088/boardgames`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newBoardgame),
+  });
+};
+
+export const deleteBoardgame = (boardgameID) => {
+  return fetch(`http://localhost:8088/boardgames/${boardgameID}`, {
+    method: "DELETE",
+  });
 };
