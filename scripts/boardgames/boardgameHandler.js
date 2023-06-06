@@ -1,7 +1,8 @@
 import {
-  useBoardgames,
-  getBoardgames,
+  getBoardgameCollection,
+  getBoardgamesByID,
   getBoardgamesByName,
+  useCollectionIDs,
 } from "./boardgameProvider.js";
 import { boardgameList } from "./boardgameList.js";
 import { boardgameSearchComponent } from "./boardgameSearch.js";
@@ -10,7 +11,7 @@ const eventHub = document.querySelector(".container");
 
 export const boardgameEventHandler = () => {
   // get initial list, setup page elements
-  getInitialBoardgames();
+  pageSetup();
 
   eventHub.addEventListener("click", (clickEvent) => {
     // search by name
@@ -26,12 +27,12 @@ export const boardgameEventHandler = () => {
   // Needed routes: update, delete, add to profile
 };
 
-const getInitialBoardgames = () => {
-  let boardgames = [];
-  getBoardgames()
+const pageSetup = () => {
+  let collectionIDs = "";
+  getBoardgameCollection()
     .then(() => {
-      boardgames = useBoardgames();
+      collectionIDs = useCollectionIDs();
+      getBoardgamesByID(collectionIDs).then(boardgameList);
     })
-    .then(boardgameSearchComponent)
-    .then(boardgameList);
+    .then(boardgameSearchComponent);
 };
