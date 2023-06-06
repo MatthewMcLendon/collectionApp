@@ -19,7 +19,7 @@ export const getBoardgameCollection = () => {
     .then((response) => response.json())
     .then((response) => {
       response.map((game) => {
-        boardgameIDs += `${game.id},`;
+        boardgameIDs += `,${game.id}`;
       });
       collectionIDs = boardgameIDs;
     });
