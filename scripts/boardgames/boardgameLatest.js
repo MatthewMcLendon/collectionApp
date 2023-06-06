@@ -20,7 +20,7 @@ export const latestBoardgame = () => {
       targetElement.innerHTML = `
       <div class="boardgame-card" id=${game[0].id}>
         <h2 class="latest-boardgame-header">Latest Boardgame:</h2>
-        <h2 class="boardgame-name">${game[0].handle}</h1>
+        <h3 class="boardgame-name">${game[0].name}</h1>
         <image class="boardgame-image" src=${game[0].images.small}>
         <div class="boardgame-description">${game[0].description}</div>
       </div>`;
