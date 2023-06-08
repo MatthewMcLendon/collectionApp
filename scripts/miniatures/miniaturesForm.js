@@ -4,6 +4,7 @@ export const miniatureForm = () => {
   targetElement.innerHTML = `
     <form class="miniature-form">
         <h2>Add to collection</h2>
+        <input id="miniature-form-id" type="hidden">
         <div class="miniature-form-divider">
             <label for="miniature-form-title">Name of miniature:</label>
             <input type="text" id="miniature-form-title" placeholder="Miniature name">

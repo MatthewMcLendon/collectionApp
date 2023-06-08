@@ -24,6 +24,46 @@
       "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106031_CarnifexBrood01.jpg",
       "storeURL": "https://www.games-workshop.com/en-US/Carnifex-Brood",
       "count": 1
+    },
+    {
+      "title": "Tyranid Warriors",
+      "game": "Warhammer 40k",
+      "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106058_TYRWarriorsLeadPrime.jpg",
+      "storeURL": "https://www.games-workshop.com/en-US/Tyranid-Warriors-2017",
+      "count": "1",
+      "id": 2
+    },
+    {
+      "title": "Zoanthropes",
+      "game": "Warhammer 40k",
+      "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106057_ZoanthropesLead.jpg",
+      "storeURL": "https://www.games-workshop.com/en-US/Zoanthropes",
+      "count": "2",
+      "id": 3
+    },
+    {
+      "title": "Exocrine",
+      "game": "Warhammer 40k",
+      "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106056_ExocreneLead.jpg",
+      "storeURL": "https://www.games-workshop.com/en-US/Exocrine",
+      "count": "1",
+      "id": 4
+    },
+    {
+      "title": "Tyrant Guard",
+      "game": "Warhammer 40k",
+      "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106055_TYRHiveGuardLeadALT.jpg",
+      "storeURL": "https://www.games-workshop.com/en-US/Tyrant-Guard",
+      "count": "1",
+      "id": 5
+    },
+    {
+      "title": "Venomthropes",
+      "game": "Warhammer 40k",
+      "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106057_VenomthropesLead.jpg",
+      "storeURL": "https://www.games-workshop.com/en-US/Venomthropes",
+      "count": "1",
+      "id": 6
     }
   ]
 }

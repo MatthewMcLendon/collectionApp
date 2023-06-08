@@ -11,3 +11,13 @@ export const getMiniatureCollection = () => {
       miniatures = response.slice();
     });
 };
+
+export const saveMiniature = (newMiniature) => {
+  return fetch(`http://localhost:8088/miniatures`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newMiniature),
+  });
+};

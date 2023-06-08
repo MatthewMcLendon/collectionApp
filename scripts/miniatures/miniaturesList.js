@@ -6,7 +6,9 @@ const targetElement = document.querySelector(".miniatures-list-container");
 export const miniatureList = () => {
   let miniatures = useMiniatures();
 
-  targetElement.innerHTML = `${miniatures.map((miniature) => {
-    return miniatureComponent(miniature);
-  })}`;
+  targetElement.innerHTML = `${miniatures
+    .map((miniature) => {
+      return miniatureComponent(miniature);
+    })
+    .join("")}`;
 };
