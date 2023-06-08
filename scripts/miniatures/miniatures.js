@@ -6,6 +6,8 @@ export const miniatureComponent = (miniature) => {
         <image class="miniature-image" src="${miniature.imageURL}">
         <figcaption class="miniature-link"><a href="${miniature.storeURL}" target="_blank">Info page</a></figcaption>
         <div class="miniature-count">Number in collection: ${miniature.count}</div>
+        <button class="miniature-update">Update</button>
+        <button class="miniature-delete">Delete</button>
     </div>
     `;
 };

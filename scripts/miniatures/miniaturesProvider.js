@@ -21,3 +21,9 @@ export const saveMiniature = (newMiniature) => {
     body: JSON.stringify(newMiniature),
   });
 };
+
+export const deleteMinature = (miniatureID) => {
+  return fetch(`http://localhost:8088/miniatures/${miniatureID}`, {
+    method: "DELETE",
+  });
+};
