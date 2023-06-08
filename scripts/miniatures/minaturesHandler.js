@@ -1,5 +1,6 @@
 import { miniatureList } from "./miniaturesList.js";
+import { getMiniatureCollection } from "./miniaturesProvider.js";
 
 export const miniatureEventHandler = () => {
-  miniatureList();
+  getMiniatureCollection().then(miniatureList);
 };
