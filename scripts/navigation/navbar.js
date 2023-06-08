@@ -6,7 +6,7 @@ export const navBar = () => {
     <a href="/" class="nav-link">Pokemon Cards</a>
     <a href="/" class="nav-link">MTG Cards</a>
     <a href="/boardgame.html" class="nav-link">BoardGames</a>
-    <a href="/" class="nav-link">Miniatures</a>
+    <a href="/miniatures.html" class="nav-link">Miniatures</a>
     `;
 };
 
