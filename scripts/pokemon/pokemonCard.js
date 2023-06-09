@@ -7,7 +7,6 @@ const pokemonComponent = (pokemon) => {
     <img class="pokemon_art">${pokemon.images.large}</img
     </div>
     <div class="pokemon_type">${pokemon.types}</div>
-    <div class="pokemon_price">${pokemon.prices.map()}</div>
     </div>
     
     </section>
