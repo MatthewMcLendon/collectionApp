@@ -4,9 +4,13 @@ import {
   getMiniatureCollection,
   saveMiniature,
   deleteMinature,
+  getMiniatureByID,
+  useMiniatures,
+  updateMiniature,
 } from "./miniaturesProvider.js";
 
 const eventHub = document.querySelector(".container");
+let miniatureID = "";
 
 export const miniatureEventHandler = () => {
   pageSetup();
@@ -38,10 +42,44 @@ export const miniatureEventHandler = () => {
         .then(miniatureList);
     }
 
-    // update mini in collection
+    // render update form
     if (clickEvent.target.className === "miniature-update") {
-      const miniatureID = clickEvent.target.parentElement.id;
-      console.log("update", miniatureID);
+      miniatureID = clickEvent.target.parentElement.id;
+
+      getMiniatureByID(miniatureID).then(() => {
+        const miniatureToUpdate = useMiniatures();
+        miniatureForm(miniatureToUpdate);
+        document.querySelector("#miniature-form-title").value =
+          miniatureToUpdate.title;
+        document.querySelector("#miniature-form-game").value =
+          miniatureToUpdate.game;
+        document.querySelector("#miniature-form-imageURL").value =
+          miniatureToUpdate.imageURL;
+        document.querySelector("#miniature-form-storeURL").value =
+          miniatureToUpdate.storeURL;
+        document.querySelector("#miniature-form-count").value =
+          miniatureToUpdate.count;
+      });
+      window.scrollTo(0, 0);
+    }
+
+    // update mini in collection
+    if (clickEvent.target.id === "miniature-form-update") {
+      const updatedMiniature = {
+        id: miniatureID,
+        title: document.querySelector("#miniature-form-title").value,
+        game: document.querySelector("#miniature-form-game").value,
+        imageURL: document.querySelector("#miniature-form-imageURL").value,
+        storeURL: document.querySelector("#miniature-form-storeURL").value,
+        count: document.querySelector("#miniature-form-count").value,
+      };
+
+      console.log(updatedMiniature);
+
+      updateMiniature(updatedMiniature)
+        .then(getMiniatureCollection)
+        .then(miniatureList)
+        .then(miniatureForm);
     }
   });
 };

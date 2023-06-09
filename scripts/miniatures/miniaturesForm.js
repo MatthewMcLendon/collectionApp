@@ -1,8 +1,8 @@
 const targetElement = document.querySelector(".miniatures-form-container");
 
-export const miniatureForm = () => {
+export const miniatureForm = (update) => {
   targetElement.innerHTML = `
-    <form class="miniature-form">
+    <form class="miniature-form" id="empty">
         <h2>Add to collection</h2>
         <input id="miniature-form-id" type="hidden">
         <div class="miniature-form-divider">
@@ -25,7 +25,18 @@ export const miniatureForm = () => {
             <label for="miniature-form-count">Number in collection:</label>
             <input type="number" id="miniature-form-count" placeholder="Number in collection">
      </div>
-     <button id="miniature-form-submit">Submit</button>
+     ${buttonSelector(update)}
     </form>
     `;
+};
+
+const buttonSelector = (update) => {
+  let button = "";
+
+  if (update) {
+    button = `<button id="miniature-form-update">Update</button>`;
+  } else {
+    button = `<button id="miniature-form-submit">Submit</button>`;
+  }
+  return button;
 };

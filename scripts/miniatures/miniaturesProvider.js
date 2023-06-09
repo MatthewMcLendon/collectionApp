@@ -27,3 +27,21 @@ export const deleteMinature = (miniatureID) => {
     method: "DELETE",
   });
 };
+
+export const getMiniatureByID = (miniatureID) => {
+  return fetch(`http://localhost:8088/miniatures/${miniatureID}`)
+    .then((response) => response.json())
+    .then((response) => {
+      miniatures = response;
+    });
+};
+
+export const updateMiniature = (updatedMiniature) => {
+  return fetch(`http://localhost:8088/miniatures/${updatedMiniature.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedMiniature),
+  });
+};

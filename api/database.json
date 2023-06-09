@@ -18,12 +18,12 @@
   ],
   "miniatures": [
     {
+      "id": 2,
       "title": "Tyranid Warriors",
       "game": "Warhammer 40k",
       "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106058_TYRWarriorsLeadPrime.jpg",
       "storeURL": "https://www.games-workshop.com/en-US/Tyranid-Warriors-2017",
-      "count": "1",
-      "id": 2
+      "count": "2"
     },
     {
       "title": "Zoanthropes",
