@@ -14,6 +14,33 @@
     },
     {
       "id": "3RVcHxhPEZ"
+    },
+    {
+      "id": "fG5Ax8PA7n"
+    }
+  ],
+  "pokemon:": [
+    {
+      "id": "g1-1",
+      "name": "Venesaur-EX"
+    }
+  ],
+  "mtg": [
+    {
+      "id": 1,
+      "art": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=582693&type=card",
+      "name": "Lightning Bolt",
+      "cost": "R",
+      "type": "Instant",
+      "text": "Lightning Bolt deals 3 damage to any target."
+    },
+    {
+      "id": 2,
+      "art": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=19570&type=card",
+      "name": "Counterspell",
+      "cost": "UU",
+      "type": "Instant",
+      "text": "Counter target spell."
     }
   ]
 }
