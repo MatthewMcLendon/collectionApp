@@ -16,10 +16,9 @@ export const miniatureEventHandler = () => {
   pageSetup();
 
   eventHub.addEventListener("click", (clickEvent) => {
-    clickEvent.preventDefault();
-
     // add mini to collection
     if (clickEvent.target.id === "miniature-form-submit") {
+      clickEvent.preventDefault();
       const newMiniature = {
         title: document.querySelector("#miniature-form-title").value,
         game: document.querySelector("#miniature-form-game").value,
@@ -36,6 +35,7 @@ export const miniatureEventHandler = () => {
 
     // delete mini from collection
     if (clickEvent.target.className === "miniature-delete") {
+      clickEvent.preventDefault();
       const miniatureID = clickEvent.target.parentElement.id;
       deleteMinature(miniatureID)
         .then(getMiniatureCollection)
@@ -44,6 +44,7 @@ export const miniatureEventHandler = () => {
 
     // render update form
     if (clickEvent.target.className === "miniature-update") {
+      clickEvent.preventDefault();
       miniatureID = clickEvent.target.parentElement.id;
 
       getMiniatureByID(miniatureID).then(() => {
@@ -65,6 +66,7 @@ export const miniatureEventHandler = () => {
 
     // update mini in collection
     if (clickEvent.target.id === "miniature-form-update") {
+      clickEvent.preventDefault();
       const updatedMiniature = {
         id: miniatureID,
         title: document.querySelector("#miniature-form-title").value,

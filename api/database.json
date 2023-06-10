@@ -83,6 +83,14 @@
       "storeURL": "https://www.games-workshop.com/en-US/Venomthropes",
       "count": "1",
       "id": 6
+    },
+    {
+      "title": "Tervigon",
+      "game": "Warhammer 40k",
+      "imageURL": "https://www.games-workshop.com/resources/catalog/product/920x950/99120106054_TYRTyrannofexLeadALT.jpg",
+      "storeURL": "https://www.games-workshop.com/en-AU/Tyranid-Tervigon",
+      "count": "1",
+      "id": 7
     }
   ]
 }

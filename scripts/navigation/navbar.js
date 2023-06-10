@@ -9,5 +9,3 @@ export const navBar = () => {
     <a href="/miniatures.html" class="nav-link">Miniatures</a>
     `;
 };
-
-// Boardgame and miniatures C, D. Object, list, provider, form, delete from collection. ON home page, show most recent from each page. Add things to collection
