@@ -15,7 +15,9 @@ if (window.location.href === "http://localhost:3000/") {
   latestMiniature();
 }
 
-// pokemonSearchComponent()
+if (window.location.href === "http://localhost:3000/pokemon") {
+  pokemonSearchComponent()
+}
 
 if (window.location.href === "http://localhost:3000/mtg") {
   mtgCardFormComponent();

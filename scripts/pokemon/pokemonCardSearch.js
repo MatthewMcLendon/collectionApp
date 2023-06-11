@@ -1,4 +1,5 @@
-import { getPokemon } from "./pokemonCardProvider.js"
+import { getPokemon, addPokemon } from "./pokemonCardProvider.js"
+import { pokemonList } from "./pokemonCardList.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".pokemon-search-container")
@@ -16,8 +17,20 @@ const pokemonSearchComponent = () => {
       eventHub.dispatchEvent(message)
       clickEvent.preventDefault()
 
+      getPokemon(searchValue)
+        .then(pokemonList)
 
     }
+
+
+    if (clickEvent.target.id === "add_pokemon_button") {
+      const [prefix, id] = clickEvent.target.id.split("--")
+      const newPokemonCard = {
+        id: id
+      }
+      addPokemon(newPokemonCard)
+    }
+
   })
 
   const render = () => {

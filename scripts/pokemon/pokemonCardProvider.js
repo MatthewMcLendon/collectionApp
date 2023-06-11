@@ -1,30 +1,38 @@
 import settings from "../.settings.js"
 
-let pokemon = []
+let searchedPokemon = []
+let pokemonCollection = []
 
-export const usePokemon = () => {
-  return pokemon
+export const useSearchedPokemon = () => {
+  return searchedPokemon
 }
 
-const setPokemon = (pokemonArray) => {
-  pokemon = pokemonArray.slice
+export const useCollectedPokemon = () => {
+  return pokemonCollection
+}
+
+const setSearchedPokemon = (pokemonArray) => {
+  searchedPokemon = pokemonArray
+}
+
+const setPokemonCollection = (pokemonArray) => {
+  pokemonCollection = pokemonArray
 }
 
 export const getPokemonCollection = () => {
   return fetch(`http://localhost:8088/pokemon`)
     .then(response => response.json())
-    .then(setPokemon)
+    .then(setPokemonCollection)
 }
 
 export const getPokemon = (pokemonSearch) => {
   return fetch(`https://api.pokemontcg.io/v2/cards?q=name:"${pokemonSearch}"`)
     .then(response => response.json())
-    .then(
-      parsedPokemon => {
-        console.table(parsedPokemon.results)
-        pokemon = parsedPokemon.results
-      }
-    )
+    .then(parsedPokemon => {
+      console.table(parsedPokemon)
+      setSearchedPokemon(parsedPokemon)
+      // pokemon = parsedPokemon.results
+    })
 }
 
 
