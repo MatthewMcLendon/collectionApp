@@ -6,8 +6,6 @@ export const navBar = () => {
     <a href="/pokemon.html" class="nav-link">Pokemon Cards</a>
     <a href="/mtg.html" class="nav-link">MTG Cards</a>
     <a href="/boardgame.html" class="nav-link">BoardGames</a>
-    <a href="/" class="nav-link">Miniatures</a>
+    <a href="/miniatures.html" class="nav-link">Miniatures</a>
     `;
 };
-
-// Boardgame and miniatures C, D. Object, list, provider, form, delete from collection. ON home page, show most recent from each page. Add things to collection
