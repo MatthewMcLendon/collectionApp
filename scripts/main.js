@@ -30,3 +30,5 @@ if (window.location.href === "http://localhost:3000/boardgame") {
 if (window.location.href === "http://localhost:3000/miniatures") {
   miniatureEventHandler();
 }
+
+// refactor all pages to a single index.html.
