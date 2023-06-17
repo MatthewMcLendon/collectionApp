@@ -1,10 +1,9 @@
 import { miniatureComponent } from "./miniatures.js";
 import { useMiniatures } from "./miniaturesProvider.js";
 
-const targetElement = document.querySelector(".miniatures-list-container");
-
 export const miniatureList = () => {
   let miniatures = useMiniatures();
+  const targetElement = document.querySelector(".miniatures-list-container");
 
   targetElement.innerHTML = `${miniatures
     .map((miniature) => {
