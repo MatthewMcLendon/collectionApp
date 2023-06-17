@@ -2,6 +2,9 @@ import { latestBoardgame } from "../boardgames/boardgameLatest.js";
 import { latestMiniature } from "../miniatures/miniaturesLatest.js";
 import { boardgameEventHandler } from "../boardgames/boardgameHandler.js";
 import { miniatureEventHandler } from "../miniatures/minaturesHandler.js";
+import { getMtgCards } from "../mtg/mtgCardProvider.js";
+import mtgCardFormComponent from "../mtg/mtgCardForm.js";
+import mtgCardListComponent from "../mtg/mtgCardList.js";
 
 const targetElement = document.querySelector(".nav-bar");
 const targetContent = document.querySelector(".content-container");
@@ -26,6 +29,24 @@ const contentSelector = () => {
       latestMiniature();
     }
 
+    if (clickEvent.target.id === "pokemon-link") {
+      clickEvent.preventDefault();
+
+      renderPokemon();
+    }
+
+    if (clickEvent.target.id === "mtg-link") {
+      clickEvent.preventDefault();
+
+      renderMtg();
+      mtgCardFormComponent();
+      getMtgCards().then(mtgCardListComponent);
+    }
+
+    if (clickEvent.target.id === "mtg-link") {
+      clickEvent.preventDefault();
+    }
+
     if (clickEvent.target.id === "boardgame-link") {
       clickEvent.preventDefault();
 
@@ -47,6 +68,20 @@ const renderLatest = () => {
     <div class="latest-boardgame"></div>
     <div class="latest-miniature"></div>
     `;
+};
+
+const renderPokemon = () => {
+  targetContent.innerHTML = `
+    <div class="pokemon"></div>
+    <div class="pokemon"></div>
+    `;
+};
+
+const renderMtg = () => {
+  targetContent.innerHTML = `
+  <div class="mtg-card-form"></div>
+  <div class="mtg-card-list"></div>
+  `;
 };
 
 const renderBoardgames = () => {
