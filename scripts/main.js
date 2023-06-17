@@ -10,10 +10,10 @@ import pokemonSearchComponent from "./pokemon/pokemonCardSearch.js";
 
 navBar();
 
-if (window.location.href === "http://localhost:3000/") {
-  latestBoardgame();
-  latestMiniature();
-}
+// if (window.location.href === "http://localhost:3000/") {
+//   latestBoardgame();
+//   latestMiniature();
+// }
 
 // pokemonSearchComponent()
 

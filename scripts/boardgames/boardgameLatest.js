@@ -5,9 +5,8 @@ import {
   getBoardgameCollection,
 } from "./boardgameProvider.js";
 
-const targetElement = document.querySelector(".latest-boardgame");
-
 export const latestBoardgame = () => {
+  const targetElement = document.querySelector(".latest-boardgame");
   let collectionIDs = "";
   let game = {};
 
