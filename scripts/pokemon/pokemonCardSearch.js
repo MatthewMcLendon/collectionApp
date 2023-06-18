@@ -3,6 +3,7 @@ import { pokemonList } from "./pokemonCardList.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".pokemon-search-container")
+const cardListContentTarget = document.querySelector(".pokemon-collection-list-container")
 let searchValue = ""
 
 const pokemonSearchComponent = () => {
@@ -19,6 +20,8 @@ const pokemonSearchComponent = () => {
 
       getPokemon(searchValue)
         .then(pokemonList)
+
+      cardListContentTarget.innerHTML = ""
 
     }
 

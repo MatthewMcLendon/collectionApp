@@ -4,6 +4,7 @@ import pokemonComponent from "./pokemonCard.js";
 //eventHub and contentTarget
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".pokemon-collection-list-container")
+const searchListContentTarget = document.querySelector(".pokemon-list-container")
 
 
 
@@ -21,6 +22,9 @@ export const pokemonCollectionList = () => {
       clickEvent.preventDefault()
       // console.log(foundPokemon)
       render(foundPokemon)
+
+      searchListContentTarget.innerHTML = ""
+      document.querySelector("#searchField").value = ""
     }
   })
 
