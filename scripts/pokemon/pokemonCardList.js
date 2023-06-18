@@ -1,5 +1,5 @@
 //import statements
-import { useSearchedPokemon, useCollectedPokemon } from "./pokemonCardProvider.js"
+import { useSearchedPokemon, useCollectedPokemon, addPokemon } from "./pokemonCardProvider.js"
 import pokemonComponent from "./pokemonCard.js"
 
 //eventHub and contentTarget
@@ -25,6 +25,8 @@ export const pokemonList = () => {
 
 
 }
+
+
 
 
 

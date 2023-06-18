@@ -23,7 +23,7 @@ const pokemonSearchComponent = () => {
     }
 
 
-    if (clickEvent.target.id === "add_pokemon_button") {
+    if (clickEvent.target.id.startsWith("add_pokemon_button--")) {
       const [prefix, id] = clickEvent.target.id.split("--")
       const newPokemonCard = {
         id: id
