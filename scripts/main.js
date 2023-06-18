@@ -7,6 +7,8 @@ import mtgCardFormComponent from "./mtg/mtgCardForm.js";
 import { getMtgCards } from "./mtg/mtgCardProvider.js";
 import mtgCardListComponent from "./mtg/mtgCardList.js";
 import pokemonSearchComponent from "./pokemon/pokemonCardSearch.js";
+import { pokemonCollectionList } from "./pokemon/pokemonCollectionList.js";
+import { getPokemonCollection } from "./pokemon/pokemonCardProvider.js";
 
 navBar();
 
@@ -17,6 +19,9 @@ if (window.location.href === "http://localhost:3000/") {
 
 if (window.location.href === "http://localhost:3000/pokemon") {
   pokemonSearchComponent()
+  getPokemonCollection().then(pokemonCollectionList)
+
+
 
 }
 
