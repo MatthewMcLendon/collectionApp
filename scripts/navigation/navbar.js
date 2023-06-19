@@ -72,8 +72,8 @@ const renderLatest = () => {
 
 const renderPokemon = () => {
   targetContent.innerHTML = `
-    <div class="pokemon"></div>
-    <div class="pokemon"></div>
+    <div class="pokemon-search-container"></div>
+    <div class="pokemon-list-container"></div>
     `;
 };
 
