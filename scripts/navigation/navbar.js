@@ -5,6 +5,10 @@ import { miniatureEventHandler } from "../miniatures/minaturesHandler.js";
 import { getMtgCards } from "../mtg/mtgCardProvider.js";
 import mtgCardFormComponent from "../mtg/mtgCardForm.js";
 import mtgCardListComponent from "../mtg/mtgCardList.js";
+import pokemonSearchComponent from "../pokemon/pokemonCardSearch.js";
+import { getPokemonCollection } from "../pokemon/pokemonCardProvider.js";
+import { pokemonList } from "../pokemon/pokemonCardList.js";
+import { pokemonCollectionList } from "../pokemon/pokemonCollectionList.js";
 
 const targetElement = document.querySelector(".nav-bar");
 const targetContent = document.querySelector(".content-container");
@@ -21,42 +25,32 @@ const contentSelector = () => {
   latestMiniature();
 
   eventHub.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "home-link") {
-      clickEvent.preventDefault();
+    clickEvent.preventDefault();
 
+    if (clickEvent.target.id === "home-link") {
       renderLatest();
       latestBoardgame();
       latestMiniature();
     }
 
     if (clickEvent.target.id === "pokemon-link") {
-      clickEvent.preventDefault();
-
       renderPokemon();
+      pokemonSearchComponent();
+      getPokemonCollection().then(pokemonCollectionList);
     }
 
     if (clickEvent.target.id === "mtg-link") {
-      clickEvent.preventDefault();
-
       renderMtg();
       mtgCardFormComponent();
       getMtgCards().then(mtgCardListComponent);
     }
 
-    if (clickEvent.target.id === "mtg-link") {
-      clickEvent.preventDefault();
-    }
-
     if (clickEvent.target.id === "boardgame-link") {
-      clickEvent.preventDefault();
-
       renderBoardgames();
       boardgameEventHandler();
     }
 
     if (clickEvent.target.id === "miniatures-link") {
-      clickEvent.preventDefault();
-
       renderMiniatures();
       miniatureEventHandler();
     }
@@ -65,30 +59,32 @@ const contentSelector = () => {
 
 const renderLatest = () => {
   targetContent.innerHTML = `
-    <div class="latest-boardgame"></div>
-    <div class="latest-miniature"></div>
-    `;
+   <div class="latest-boardgame"></div>
+   <div class="latest-miniature"></div>
+   `;
 };
 
 const renderPokemon = () => {
   targetContent.innerHTML = `
-    <div class="pokemon-search-container"></div>
-    <div class="pokemon-list-container"></div>
-    `;
+   <div class="pokemon-search-container"></div>
+   <a class="pokemon-collection-link" href="">My Card Collection</a>
+   <div class="pokemon-list-container"></div>
+   <div class="pokemon-collection-list-container"></div>
+   `;
 };
 
 const renderMtg = () => {
   targetContent.innerHTML = `
-  <div class="mtg-card-form"></div>
-  <div class="mtg-card-list"></div>
-  `;
+   <div class="mtg-card-form"></div>
+   <div class="mtg-card-list"></div>
+   `;
 };
 
 const renderBoardgames = () => {
   targetContent.innerHTML = `
-    <div class="boardgame-search-container"></div>
-    <div class="boardgame-list-container"></div>
-    `;
+   <div class="boardgame-search-container"></div>
+   <div class="boardgame-list-container"></div>
+   `;
 };
 
 const renderMiniatures = () => {
