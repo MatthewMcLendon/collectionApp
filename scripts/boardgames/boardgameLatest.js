@@ -5,9 +5,8 @@ import {
   getBoardgameCollection,
 } from "./boardgameProvider.js";
 
-const targetElement = document.querySelector(".latest-boardgame");
-
 export const latestBoardgame = () => {
+  const targetElement = document.querySelector(".latest-boardgame");
   let collectionIDs = "";
   let game = {};
 
@@ -19,7 +18,7 @@ export const latestBoardgame = () => {
       game = useBoardgames();
       targetElement.innerHTML = `
       <div class="boardgame-card" id=${game[0].id}>
-        <h2 class="latest-boardgame-header">Latest Boardgame:</h2>
+        <h2 class="latest-boardgame-header">Latest Boardgame</h2>
         <h3 class="boardgame-name">${game[0].name}</h1>
         <image class="boardgame-image" src=${game[0].images.small}>
         <div class="boardgame-description">${game[0].description}</div>

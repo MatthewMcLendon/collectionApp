@@ -1,6 +1,6 @@
-const targetElement = document.querySelector(".miniatures-form-container");
-
 export const miniatureForm = (update) => {
+  const targetElement = document.querySelector(".miniatures-form-container");
+
   targetElement.innerHTML = `
     <form class="miniature-form" id="empty">
         <h2>Add to collection</h2>

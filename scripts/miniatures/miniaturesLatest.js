@@ -1,8 +1,8 @@
 import { useMiniatures, getMiniatureCollection } from "./miniaturesProvider.js";
 
-const targetElement = document.querySelector(".latest-miniature");
-
 export const latestMiniature = () => {
+  const targetElement = document.querySelector(".latest-miniature");
+
   getMiniatureCollection().then(() => {
     const miniatures = useMiniatures();
     const latestMiniature = miniatures.slice(-1)[0];
