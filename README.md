@@ -40,4 +40,4 @@ The miniatures collection does not use an external api. The information is added
 
 ## Authors
 
-[Matthew McLendon](https://github.com/MatthewMcLendon)
+[Matthew McLendon](https://github.com/MatthewMcLendon) - Created the boardgame and miniatures components and styled the pokemon and MTG components.

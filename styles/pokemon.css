@@ -36,7 +36,7 @@
 .pokemon_card {
   background-color: rgba(96, 139, 177, 30%);
   border-radius: 1rem;
-  width: 30%;
+  min-width: 30%;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: auto;
@@ -49,7 +49,7 @@
 }
 
 .pokemon_name {
-  margin: 1rem;
+  margin: 0.5rem;
   font-weight: bold;
   font-size: large;
 }
@@ -58,19 +58,18 @@
   padding: 5%;
 }
 
-.button {
+.pokemon_card button {
   background-color: rgb(96, 139, 177);
   color: white;
   border-radius: 1rem;
   font-size: large;
   width: 30%;
-  outline: white;
 }
 
-.pokemon_picture {
+.pokemon_art {
   width: auto;
-  height: auto;
+  height: 350px;
   margin: auto;
-  padding: auto;
+  padding: 0 1rem;
   display: block;
 }

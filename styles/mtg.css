@@ -1,0 +1,70 @@
+.mtg-card-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(99, 117, 145, 30%);
+  border-radius: 1rem;
+}
+
+.mtg-card-form button {
+  background-color: rgb(96, 139, 177);
+  color: white;
+  border-radius: 1rem;
+  font-size: large;
+  width: 40%;
+  margin: 1%;
+  display: inline;
+  flex-grow: 50%;
+}
+
+.mtg-card-form label {
+  display: inline-block;
+  width: 10%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.mtg-card-form input {
+  width: 80%;
+}
+
+.mtg-card-form div {
+  padding: 1%;
+}
+
+.card_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_card {
+  background-color: rgba(96, 139, 177, 30%);
+  border-radius: 1rem;
+  min-width: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 1%;
+}
+
+.card-art {
+  width: auto;
+  height: 400px;
+  margin: auto;
+  padding: 1rem;
+  display: block;
+}
+
+.card_header {
+  padding: auto;
+}
+
+.button {
+  background-color: rgb(96, 139, 177);
+  color: white;
+  border-radius: 1rem;
+  font-size: large;
+  width: 49%;
+  display: inline;
+}
