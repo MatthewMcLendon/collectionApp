@@ -66,8 +66,10 @@ const renderLatest = () => {
 
 const renderPokemon = () => {
   targetContent.innerHTML = `
-   <div class="pokemon-search-container"></div>
-   <a class="pokemon-collection-link" href="">My Card Collection</a>
+   <div class="pokemon-nav-container">
+    <a class="pokemon-collection-link" href="">My Card Collection</a>
+    <div class="pokemon-search-container"></div>
+   </div>
    <div class="pokemon-list-container"></div>
    <div class="pokemon-collection-list-container"></div>
    `;
@@ -96,6 +98,7 @@ const renderMiniatures = () => {
 
 const renderNavbar = () => {
   targetElement.innerHTML = `
+    <h1 class="page-title">Collections</h1>
     <a href="/" class="nav-link" id="home-link">Home</a>
     <a href="/" class="nav-link" id="pokemon-link">Pokemon Cards</a>
     <a href="/" class="nav-link" id="mtg-link">MTG Cards</a>
