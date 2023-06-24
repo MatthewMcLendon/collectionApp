@@ -56,7 +56,7 @@ Allows you to manually upload collected Magic: the Gathering cards by entering t
       "cost": "R",
       "type": "Instant",
       "text": "Lightning Bolt deals 3 damage to any target."
-    }
+    }]
 ```
 
 ## Authors
