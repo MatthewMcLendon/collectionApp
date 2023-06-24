@@ -1,0 +1,17 @@
+.boardgame-card {
+  border: 2px solid rgba(96, 139, 177, 30%);
+}
+
+.boardgame-image {
+  border: 1px solid rgba(96, 139, 177, 30%);
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.boardgame-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
