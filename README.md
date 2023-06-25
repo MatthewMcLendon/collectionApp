@@ -36,16 +36,16 @@ The miniatures collection does not use an external api. The information is added
       "storeURL": "https://www.games-workshop.com/en-US/Tyranid-Warriors-2017",
       "count": "2"
     }]
-  
+
 ```
 
 ## Pokemon Cards
 
-Using the [pokemon tcg API](https://docs.pokemontcg.io/) this portion of the app allows you to add pokemon cards to our local json database where they can be viewed in your collection. 
+Using the [pokemon tcg API](https://docs.pokemontcg.io/) this portion of the app allows you to add pokemon cards to our local json database where they can be viewed in your collection.
 
-## MTG Cards 
+## MTG Cards
 
-Allows you to manually upload collected Magic: the Gathering cards by entering the name, type, mana cost, etc., based on the following model. 
+Allows you to manually upload collected Magic: the Gathering cards by entering the name, type, mana cost, etc., based on the following model.
 
 ```
     "mtg": [
@@ -62,4 +62,5 @@ Allows you to manually upload collected Magic: the Gathering cards by entering t
 ## Authors
 
 [Matthew McLendon](https://github.com/MatthewMcLendon) - Created the boardgame and miniatures components and styled the pokemon and MTG components.
-[John Gilliam](https://github.com/jwgilliam) - Created the pokemon and mtg card components and styled the miniature and boardgame components. 
+
+[John Gilliam](https://github.com/jwgilliam) - Created the pokemon and mtg card components and styled the miniature and boardgame components.
