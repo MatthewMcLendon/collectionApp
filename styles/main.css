@@ -1,5 +1,7 @@
 @import url("./mtg.css");
 @import url("./pokemon.css");
+@import "./boardgame.css";
+@import "./miniature.css";
 
 html {
   height: 100%;
